@@ -28,14 +28,17 @@ export class DinamicButtons{
     }
 
     async clickFirstButton(){
+        await this.btnOne.isVisible
         await this.btnOne.click();
     }
 
     async clickSecondButton(){
+        await this.btnTwo.isVisible
         await this.btnTwo.click();
     }
 
     async clickThirdButton(){
+        await this.btnThree.isVisible
         await this.btnThree.click();
     }
 
