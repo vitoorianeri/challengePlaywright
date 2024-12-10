@@ -11,15 +11,6 @@ test('click in the refresh button in the page and verify the counter changed', a
     await refresh.clickRefreshButton();
     const refreshedCount = await refresh.getCounterNumber();
 
-    // const initialRefreshCount = await this.refresh();
-    //     const refreshedCount = await this.getCounterNumber();
-
-    if(initialRefreshCount !== refreshedCount) {
-        console.log('The number of refresh was updated');
-    } else {
-        console.log("The number of refresh wasn't updated");
-    }
-
     expect((initialRefreshCount !== refreshedCount)).toBe(true);
     
 });
