@@ -1,6 +1,6 @@
 import { expect, type Locator, type Page } from '@playwright/test';
 
-export class DinamicButtons{
+export class DinamicButtons {
 
     readonly page: Page
     readonly btnStart: Locator
@@ -8,8 +8,8 @@ export class DinamicButtons{
     readonly btnTwo: Locator
     readonly btnThree: Locator
     readonly btnMessage: Locator
-    
-    constructor(page: Page){
+
+    constructor(page: Page) {
 
         this.page = page
         this.btnStart = page.locator('#button00')
@@ -19,30 +19,30 @@ export class DinamicButtons{
         this.btnMessage = page.locator('#buttonmessage')
     }
 
-    async navegatTo(){
+    async navegatTo() {
         await this.page.goto('https://testpages.eviltester.com/styled/dynamic-buttons-simple.html')
     }
 
-    async clickStartButton(){
+    async clickStartButton() {
         await this.btnStart.click();
     }
 
-    async clickFirstButton(){
+    async clickFirstButton() {
         await this.btnOne.isVisible
         await this.btnOne.click();
     }
 
-    async clickSecondButton(){
+    async clickSecondButton() {
         await this.btnTwo.isVisible
         await this.btnTwo.click();
     }
 
-    async clickThirdButton(){
+    async clickThirdButton() {
         await this.btnThree.isVisible
         await this.btnThree.click();
     }
 
-    async checkMessage(){
+    async checkMessage() {
         await this.btnMessage.isVisible
     }
 

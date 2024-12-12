@@ -6,22 +6,22 @@ export class RefreshPage {
     readonly btnRefresh: Locator
     readonly counterNumber: Locator
 
-    constructor(page: Page){
+    constructor(page: Page) {
 
         this.page = page;
         this.btnRefresh = page.locator('#button')
         this.counterNumber = page.locator('//*[@id="embeddedrefreshdatevalue"]')
     }
 
-    async navegatTo(){
+    async navegatTo() {
         await this.page.goto('https://testpages.eviltester.com/styled/refresh')
     }
 
-    async getCounterNumber(){
+    async getCounterNumber() {
         return this.counterNumber.innerText();
     }
 
-    async clickRefreshButton(){
+    async clickRefreshButton() {
         await this.btnRefresh.click();
     }
 
