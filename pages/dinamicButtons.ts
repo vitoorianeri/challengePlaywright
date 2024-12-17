@@ -16,7 +16,7 @@ export class DinamicButtons {
         this.btnOne = page.locator('#button01')
         this.btnTwo = page.locator('#button02')
         this.btnThree = page.locator('#button03')
-        this.btnMessage = page.locator('#buttonmessage')
+        this.btnMessage = page.getByText('All Buttons Clicked')
     }
 
     async navegatTo() {

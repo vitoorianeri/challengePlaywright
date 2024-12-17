@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-import { chromium } from 'playwright';
 import { DinamicButtons } from '../pages/dinamicButtons';
 
 test('2. click in the dinamic buttons', async ({ page }) => {
